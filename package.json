@@ -1,14 +1,18 @@
 {
-  "name": "vinix-strapi-new",
+  "name": "vinix-strapi-cms",
   "version": "0.1.0",
   "private": true,
-  "description": "A Strapi application",
+  "description": "Vinix Consulting Strapi CMS",
   "scripts": {
     "build": "strapi build",
     "deploy": "strapi deploy",
     "develop": "strapi develop",
     "start": "strapi start",
-    "strapi": "strapi"
+    "strapi": "strapi",
+    "dev": "NODE_ENV=development strapi develop",
+    "start:prod": "NODE_ENV=production strapi start",
+    "build:prod": "NODE_ENV=production strapi build",
+    "db:migrate": "strapi database migrate"
   },
   "dependencies": {
     "@strapi/plugin-cloud": "5.9.0",
@@ -17,6 +21,7 @@
     "@strapi/provider-upload-cloudinary": "^5.9.0",
     "@strapi/strapi": "5.9.0",
     "better-sqlite3": "11.3.0",
+    "pg": "^8.13.1",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.0.0",
