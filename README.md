@@ -1,61 +1,69 @@
-# 🚀 Getting started with Strapi
+# Vinix Strapi CMS
 
-Strapi comes with a full featured [Command Line Interface](https://docs.strapi.io/dev-docs/cli) (CLI) which lets you scaffold and manage your project in seconds.
+Content Management System voor de Vinix Marketing website.
 
-### `develop`
+## Setup
 
-Start your Strapi application with autoReload enabled. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-develop)
+### Development
 
+1. Clone de repository:
+```bash
+git clone https://github.com/Vinix24/vinix-strapi-cms.git
+cd vinix-strapi-cms
 ```
+
+2. Installeer dependencies:
+```bash
+npm install
+```
+
+3. Maak een `.env` bestand aan gebaseerd op `.env.example`:
+```bash
+cp .env.example .env
+```
+
+4. Start de development server:
+```bash
 npm run develop
-# or
-yarn develop
 ```
 
-### `start`
+De admin interface is beschikbaar op: http://localhost:1337/admin
 
-Start your Strapi application with autoReload disabled. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-start)
+### Configuratie
 
-```
-npm run start
-# or
-yarn start
-```
+#### Database
+- Development: SQLite (`.tmp/data.db`)
+- Production: PostgreSQL op Railway
 
-### `build`
+#### Content Types
+- Blog Posts
+- Authors
+- Categories
+- Comments
+- Case Studies
 
-Build your admin panel. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-build)
+#### Scripts
+- `setup-permissions.js`: Configureert de juiste permissies voor public en authenticated roles
+- `npm run develop`: Start development server
+- `npm run build`: Bouwt de productie versie
+- `npm run start`: Start de productie server
 
-```
-npm run build
-# or
-yarn build
-```
+### Railway Deployment
 
-## ⚙️ Deployment
+1. Zorg dat alle environment variables zijn geconfigureerd in Railway:
+   - Database configuratie
+   - Admin gegevens
+   - JWT secrets
 
-Strapi gives you many possible deployment options for your project including [Strapi Cloud](https://cloud.strapi.io). Browse the [deployment section of the documentation](https://docs.strapi.io/dev-docs/deployment) to find the best solution for your use case.
+2. De deployment gebeurt automatisch bij push naar de main branch
 
-```
-yarn strapi deploy
-```
+## Development Guidelines
 
-## 📚 Learn more
+1. Maak gebruik van TypeScript voor alle nieuwe code
+2. Volg de Strapi best practices voor content type definities
+3. Test nieuwe features lokaal voordat je ze naar production pushed
+4. Houd de documentatie up-to-date
 
-- [Resource center](https://strapi.io/resource-center) - Strapi resource center.
-- [Strapi documentation](https://docs.strapi.io) - Official Strapi documentation.
-- [Strapi tutorials](https://strapi.io/tutorials) - List of tutorials made by the core team and the community.
-- [Strapi blog](https://strapi.io/blog) - Official Strapi blog containing articles made by the Strapi team and the community.
-- [Changelog](https://strapi.io/changelog) - Find out about the Strapi product updates, new features and general improvements.
+## Contact
 
-Feel free to check out the [Strapi GitHub repository](https://github.com/strapi/strapi). Your feedback and contributions are welcome!
-
-## ✨ Community
-
-- [Discord](https://discord.strapi.io) - Come chat with the Strapi community including the core team.
-- [Forum](https://forum.strapi.io/) - Place to discuss, ask questions and find answers, show your Strapi project and get feedback or just talk with other Community members.
-- [Awesome Strapi](https://github.com/strapi/awesome-strapi) - A curated list of awesome things related to Strapi.
-
----
-
-<sub>🤫 Psst! [Strapi is hiring](https://strapi.io/careers).</sub>
+Voor vragen over deze setup, neem contact op met Vincent van Deth.

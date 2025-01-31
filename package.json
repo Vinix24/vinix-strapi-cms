@@ -1,5 +1,5 @@
 {
-  "name": "vinix-strapi",
+  "name": "vinix-strapi-new",
   "version": "0.1.0",
   "private": true,
   "description": "A Strapi application",
@@ -11,14 +11,16 @@
     "strapi": "strapi"
   },
   "dependencies": {
-    "@strapi/plugin-cloud": "5.8.1",
-    "@strapi/plugin-users-permissions": "5.8.1",
-    "@strapi/strapi": "5.8.1",
+    "@strapi/plugin-cloud": "5.9.0",
+    "@strapi/plugin-users-permissions": "5.9.0",
+    "@strapi/provider-email-nodemailer": "^5.9.0",
+    "@strapi/provider-upload-cloudinary": "^5.9.0",
+    "@strapi/strapi": "5.9.0",
     "better-sqlite3": "11.3.0",
-    "pg": "^8.13.1",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.0.0",
+    "sharp": "^0.33.5",
     "styled-components": "^6.0.0"
   },
   "devDependencies": {
@@ -32,6 +34,6 @@
     "npm": ">=6.0.0"
   },
   "strapi": {
-    "uuid": "a68d9ce8-3812-44a9-a28d-984bea707026"
+    "uuid": "ae2ee8d8-7716-40a7-9101-1bc99d284656"
   }
 }
